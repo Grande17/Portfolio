@@ -11,6 +11,7 @@ import java.util.Random;
 public class Computer extends ActionEvent {
     private GameBoard gb = SetNumberOfGamesScene.gameBoard;
 
+
     public Button getRandomButton(Button[] buttons){
         Random random = new Random();
         int f = random.nextInt(buttons.length);
@@ -25,5 +26,4 @@ public class Computer extends ActionEvent {
         random.setDisable(true);
         gb.getLabel().setText("X Turn");
     }
-
 }

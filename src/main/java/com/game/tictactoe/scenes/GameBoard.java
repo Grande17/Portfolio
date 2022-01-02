@@ -52,7 +52,7 @@ public class GameBoard extends ActionEvent {
 
         label = new Label();
 
-        label.setText("Hello in my TicTacToe");
+        label.setText("X Turn");
         label.setFont(Font.font("Helvetica", 30));
         label.setAlignment(Pos.CENTER);
         label.setBackground(new Background(new BackgroundFill(Color.RED, null, null)));

@@ -9,7 +9,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
 public class MenuBoard {
-    public static GameBoard gameBoard = new GameBoard();
+    public static  GameBoard gameBoard = new GameBoard();
     public static SetNumberOfGamesScene setNumber = new SetNumberOfGamesScene();
 
 

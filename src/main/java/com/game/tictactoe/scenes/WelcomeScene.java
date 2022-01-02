@@ -4,9 +4,8 @@ import com.game.tictactoe.Main;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
 public class WelcomeScene {
@@ -17,11 +16,19 @@ public class WelcomeScene {
 
 
     public Scene welcomeScene(){
+        Image image = new Image("com/game/tictactoe/image.png");
+        BackgroundImage bImg = new BackgroundImage(image,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                new BackgroundSize(1.0,1.0,true,true,false,false));
+        Background bGround = new Background(bImg);
+
 
         borderPane = new BorderPane();
-        borderPane.setBackground(new Background(new BackgroundFill(Color.SADDLEBROWN,null,null)));
+        borderPane.setBackground(bGround);
         button1 = new Button("Click to continue");
-        button1.setPrefSize(600,600);
+        button1.setPrefSize(150,100);
         button1.setAlignment(Pos.CENTER);
         borderPane.setCenter(button1);
         welcomeScene = new Scene(borderPane,800,800);

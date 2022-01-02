@@ -1,6 +1,6 @@
 package com.game.tictactoe.controller;
 
-import com.game.tictactoe.Main;
+
 import com.game.tictactoe.scenes.Alerts;
 import com.game.tictactoe.scenes.GameBoard;
 import com.game.tictactoe.scenes.MenuBoard;
@@ -15,7 +15,6 @@ public class Controller extends ActionEvent{
     public void buttonsHandler(ActionEvent event){
         Alerts alerts = new Alerts();
         GameBoard gameBoard = SetNumberOfGamesScene.gameBoard;
-        SetNumberOfGamesScene setNumberOfGamesScene = MenuBoard.setNumber;
         Computer computer = new Computer();
 
         for (int i=0; i<9; i++){
@@ -33,13 +32,7 @@ public class Controller extends ActionEvent{
                             resultCheck.whoWon();
                         }
                     }
-                    if(resultCheck.getPlayerWon() == setNumberOfGamesScene.getNumberOfGames()){
-                        alerts.winAlert();
-                    }
-                    if (resultCheck.getCompWon() == setNumberOfGamesScene.getNumberOfGames()){
-                        alerts.looseAlert();
-                    }
-
+                    alerts.launchAlert();
                 }
             }
         }

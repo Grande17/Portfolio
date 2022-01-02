@@ -11,6 +11,8 @@ import javafx.scene.control.ButtonType;
 public class Alerts {
     private ResultCheck resultCheck = Controller.resultCheck;
     private Controller controller = GameBoard.controller;
+    private SetNumberOfGamesScene setNumberOfGamesScene = MenuBoard.setNumber;
+    private GameBoard gameBoard = SetNumberOfGamesScene.gameBoard;
 
     public void winAlert(){
         Alert winAlert = new Alert(Alert.AlertType.NONE, "Congratulations, You won!");
@@ -48,5 +50,16 @@ public class Alerts {
                 System.exit(0);
             }
         } );
+    }
+
+    public void launchAlert(){
+        if (resultCheck.getPlayerWon() == setNumberOfGamesScene.getNumberOfGames()){
+            gameBoard.getLabel().setText("You WON!");
+            winAlert();
+        }
+        if (resultCheck.getCompWon() == setNumberOfGamesScene.getNumberOfGames()){
+            gameBoard.getLabel().setText("You LOST!");
+            looseAlert();;
+        }
     }
 }
