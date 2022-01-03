@@ -3,7 +3,6 @@ package com.game.tictactoe.controller;
 
 import com.game.tictactoe.scenes.Alerts;
 import com.game.tictactoe.scenes.GameBoard;
-import com.game.tictactoe.scenes.MenuBoard;
 import com.game.tictactoe.scenes.SetNumberOfGamesScene;
 import javafx.event.ActionEvent;
 
